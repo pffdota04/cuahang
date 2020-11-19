@@ -1,0 +1,210 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<div class="header">
+		<%
+			String kqInsert = "";
+		if (request.getAttribute("hasError") != null)
+			kqInsert = (String) request.getAttribute("hasError");
+		%>
+		<%@ include file="/Views/Admin/commom/header.jsp"%>
+	</div>
+
+	<div class="container">
+		<h1>Account Center</h1>
+		<div class="insert">
+			<form action="${pageContext.request.contextPath}/insert-account"
+				method="post">
+				<p>Insert</p>
+				<table cellspacing="5">
+					<tr>
+						<td align="right">Email:</td>
+						<td><input type="text" name="email"></td>
+					</tr>
+					<tr>
+						<td align="right">Password</td>
+						<td><input type="text" name="pass"></td>
+					</tr>
+					<tr>
+						<td align="right">First name:</td>
+						<td><input type="text" name="firstname"></td>
+					</tr>
+					<tr>
+						<td align="right">Last name:</td>
+						<td><input type="text" name="lastname"></td>
+					</tr>
+					<tr>
+						<td align="right">Phone:</td>
+						<td><input type="text" name="phone"></td>
+					</tr>
+					<tr>
+						<td align="right">Address</td>
+						<td><input type="text" name="address"></td>
+					</tr>
+					<tr>
+						<td align="right">Gender:</td>
+						<td><select name="gender">
+								<%
+									for (int sex = 0; sex < 2; sex++) {
+								%>
+								<option value="<%=sex%>">
+									<%
+										if (sex == 0) {
+									%>Male<%
+										}
+									%>
+									<%
+										if (sex == 1) {
+									%>Female<%
+										}
+									%>
+								</option>
+								<%
+									}
+								%>
+						</select></td>
+					<tr>
+						<td>Date of birth:</td>
+						<td>Time Picker Here</td>
+					</tr>
+					<tr>
+						<td align="right">Role:</td>
+						<td><select name="role">
+								<%
+									for (int sex = 0; sex < 3; sex++) {
+								%>
+								<option value="<%=sex%>">
+									<%
+										if (sex == 0) {
+									%>USER<%
+										}
+									%>
+									<%
+										if (sex == 1) {
+									%>SALEPERSON<%
+										}
+									%>
+									<%
+										if (sex == 2) {
+									%>ADMINISTRATOR<%
+										}
+									%>
+								</option>
+								<%
+									}
+								%>
+						</select></td>
+					<tr>
+						<td><%=kqInsert%></td>
+						<td><input type="submit" value="insert"></td>
+					</tr>
+				</table>
+			</form>
+		</div>
+		
+		<div class="update">
+			<form action="${pageContext.request.contextPath}/insert-account"
+				method="post">
+				<p>Update</p>
+				<table cellspacing="5">
+					<tr>
+						<td align="right">Email:</td>
+						<td><input type="text" name="email"></td>
+						<td><a href="#" class="btnSearch">Search</a></td>
+					</tr>
+					<tr>
+						<td align="right">Password</td>
+						<td><input type="text" name="pass"></td>
+					</tr>
+					<tr>
+						<td align="right">First name:</td>
+						<td><input type="text" name="firstname"></td>
+					</tr>
+					<tr>
+						<td align="right">Last name:</td>
+						<td><input type="text" name="lastname"></td>
+					</tr>
+					<tr>
+						<td align="right">Phone:</td>
+						<td><input type="text" name="phone"></td>
+					</tr>
+					<tr>
+						<td align="right">Address</td>
+						<td><input type="text" name="address"></td>
+					</tr>
+					<tr>
+						<td align="right">Gender:</td>
+						<td><select name="gender">
+								<%
+									for (int sex = 0; sex < 2; sex++) {
+								%>
+								<option value="<%=sex%>">
+									<%
+										if (sex == 0) {
+									%>Male<%
+										}
+									%>
+									<%
+										if (sex == 1) {
+									%>Female<%
+										}
+									%>
+								</option>
+								<%
+									}
+								%>
+						</select></td>
+					<tr>
+						<td>Date of birth:</td>
+						<td>Time Picker Here</td>
+					</tr>
+					<tr>
+						<td align="right">Role:</td>
+						<td><select name="role">
+								<%
+									for (int sex = 0; sex < 3; sex++) {
+								%>
+								<option value="<%=sex%>">
+									<%
+										if (sex == 0) {
+									%>USER<%
+										}
+									%>
+									<%
+										if (sex == 1) {
+									%>SALEPERSON<%
+										}
+									%>
+									<%
+										if (sex == 2) {
+									%>ADMINISTRATOR<%
+										}
+									%>
+								</option>
+								<%
+									}
+								%>
+						</select></td>
+					<tr>
+						<td><%=kqInsert%></td>
+						<td><input type="submit" value="update"></td>
+					</tr>
+				</table>
+			</form>
+		</div>
+		
+	</div>
+	
+	
+	<div class="footer">
+		<%@ include file="/Views/Admin/commom/footer.jsp"%>
+	</div>
+
+</body>
+</html>

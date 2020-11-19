@@ -1,0 +1,22 @@
+package DB;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class MyDB {
+
+	public Connection getConnection() throws Exception{
+		String url= "jdbc:sqlserver://LAPTOP-5TF2OMA3\\KIET01;user=admin;password=1234;Database=Unifi";
+		//if(instance==null|| instance.trim().isEmpty()) {
+		//	url="jdbc:sqlserver://"+serverName+":"+portNum+";databaseName:"+dbName;
+		//}
+		System.out.print("FFFFFF  ");
+		System.out.println(url);
+		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+		System.out.print("   XXXXX  ");
+		return DriverManager.getConnection(url); // sql Authention
+	}
+
+	
+	
+}

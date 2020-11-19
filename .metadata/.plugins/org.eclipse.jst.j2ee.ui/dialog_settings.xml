@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="J2EE_EXPORT_OVERWRITE" value="true"/>
+	<item key="J2EE_EXPORT_SOURCE" value="true"/>
+	<list key="MRU_RUNTIME_STORE">
+		<item value="NULL_RUNTIME"/>
+		<item value="Apache Tomcat v8.5"/>
+	</list>
+	<list key="J2EE_EXPORT_JST_WEB">
+		<item value="C:\Users\Tuan Kiet\Desktop\CuaHang.war"/>
+		<item value="convit.war"/>
+		<item value="ok.war"/>
+		<item value="C:\Users\Tuan Kiet\Desktop\okbaby.war"/>
+		<item value="C:\Users\Tuan Kiet\Desktop\ok.war"/>
+		<item value="C:\Users\Tuan Kiet\Documents\hello.war"/>
+	</list>
+	<list key="J2EE_IMPORT_null">
+		<item value="C:\Users\Tuan Kiet\Desktop\ok.war"/>
+		<item value="C:\Users\Tuan Kiet\Downloads\Assignment123.war"/>
+		<item value="C:\Users\Tuan Kiet\Downloads\Assignment.war"/>
+	</list>
+	<list key="J2EE_IMPORT_EJB">
+		<item value="C:\Users\Tuan Kiet\Downloads\sqljdbc_6.0.8112.200_enu\sqljdbc_6.0\enu\jre8\sqljdbc42.jar"/>
+	</list>
+</section>

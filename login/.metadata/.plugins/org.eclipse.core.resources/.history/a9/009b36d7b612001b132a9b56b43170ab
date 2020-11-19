@@ -1,0 +1,23 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+ <%
+    double a=9.95;
+    String name = (String)request.getAttribute("name");
+    String email = (String)request.getAttribute("email");  // ? ? 
+    String quantity = (String)request.getAttribute("quantiny");
+  %>
+  <h2>Order Confirmation</h2>
+  <p>
+    Thank you for your order of <%= quantity %> widgets, <%= name %>. <br>
+    At <%=a %>$, you will have to pay <%=Math.round(    a*Double.parseDouble(quantity)*1000)/1000d %>$
+    You will shortly receive an email confirmation at <%= email %>.
+  </p>
+</body>
+</html>

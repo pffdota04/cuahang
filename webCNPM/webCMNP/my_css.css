@@ -1,0 +1,55 @@
+
+/* ----------------Contact---------------------- */
+.main-nav{
+    float: left;
+    list-style: none;
+    margin-top: 2px;
+}
+.main-nav li{
+    display: inline-block;
+    margin-right: 30px;
+}
+
+.main-nav nav-qc{
+    margin-left: -10px;
+}
+.clearfix::after{
+    content: " ";
+    display: table;
+    clear: both;
+}
+/* ---------------------logo & ads-------------- */
+
+.ads{
+    float: left;
+}
+
+/* --------------------Titles--------------------- */
+.titles{
+    float: none;   
+    background-color: antiquewhite;
+    padding: -5px -20px;
+  
+}
+.Item li{
+    display: inline-block;
+    list-style: none ;
+  
+}
+.Item li a{
+    text-decoration: none;
+    font-size: 120%;
+    padding-left: 10px;
+    line-height: 135%;  
+   
+}
+/* ---------------------------NEW-------------------- */
+ /* First new */
+ .content{
+     display: flex;
+ }
+
+ .first-new h1{
+     background-color: beige;
+   
+ }

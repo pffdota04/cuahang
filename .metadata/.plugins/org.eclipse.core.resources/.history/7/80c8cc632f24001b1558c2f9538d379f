@@ -1,0 +1,8 @@
+package com.controller.admin;
+
+import javax.servlet.annotation.WebServlet;
+
+@WebServlet("/update-account")
+public class updateAccount {
+
+}

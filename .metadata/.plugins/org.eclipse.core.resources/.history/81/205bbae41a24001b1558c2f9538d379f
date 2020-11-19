@@ -1,0 +1,37 @@
+package DAO;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+import com.model.Account;
+
+import DB.MyDB;
+
+public class queryDAO {
+
+	
+	public boolean insertAccount(String role, String email, String pass, String img, String firstName, String lastName, String phone, String address, String gender, String dateBirth, String dateCreared, boolean isAvailable)
+	{
+		Connection conn1 = null, conn2=null; 
+		PreparedStatement ps1 = null, ps2=null;
+		ResultSet rs = null;  
+		try {
+			String query= "insert into Account value('"+email+"','"+pass+"','"+img+"','"+firstName+"','"+lastName+"','"+phone+"','"+address+"' ,'"+gender+"','"+dateBirth+"' ,'"+dateCreared+"','"+isAvailable+"')";
+			System.out.println(query);
+			conn1 = new  MyDB().getConnection(); 
+			ps1 = conn1.prepareStatement(query);	
+			ps1.executeQuery();
+			
+			String query2= "insert into Account value('"+email+"','"+role+"')";
+			conn2 = new  MyDB().getConnection(); 
+			ps2 = conn2.prepareStatement(query2);	
+			ps2.executeQuery();
+			return true;		
+			} catch (Exception e) { System.out.println(e);
+		}
+		return false;
+	}
+	
+
+}

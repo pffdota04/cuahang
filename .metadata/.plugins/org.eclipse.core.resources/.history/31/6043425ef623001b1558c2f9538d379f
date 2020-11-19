@@ -1,0 +1,38 @@
+package com.model;
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.time.LocalDateTime; // Import the LocalDateTime class
+import java.time.format.DateTimeFormatter
+@WebServlet("/insert-account")
+public class insertAccount extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+    public insertAccount() {
+        super();
+        
+    }
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String email = request.getParameter("email");
+		String pass = request.getParameter("pass");
+		String customerPhone = request.getParameter("firstname");
+		String customerEmail = request.getParameter("lastname");
+		String NumberCredit = request.getParameter("phone");
+		String processor =  request.getParameter("address");
+		String ExpirationYear = request.getParameter("gender");
+		String[] peripherals = request.getParameterValues("role");
+		String Bday  = "1993-10-06 09:45:47.000";  // thay bang timePicker
+		
+		
+	}
+
+}

@@ -1,0 +1,23 @@
+package DB;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class MyDB {
+
+	public Connection getConnection() throws Exception{
+		String url= "jdbc:sqlserver://"+serverName+":"+portNum+"\\"+
+				instance+";databaseName:"+dbName;
+		if(instance==null|| instance.trim().isEmpty()) {
+			url="jdbc:sqlserver://"+serverName+":"+portNum+";databaseName:"+dbName;
+		}
+		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+		return DriverManager.getConnection(url, "admin", "1234"); // sql Authention
+	}
+	private final String serverName="LAPTOP-5TF2OMA3\\KIET01";
+	private final String dbName="localhost";
+	private final String portNum="1433";
+	private final String instance="";
+	
+	
+}
